@@ -1,0 +1,8 @@
+h1 {
+    margin-bottom: 20px;
+}
+
+label, span, h1, .form-input, .form-check, .form-help {
+    font-family: 'Varela Round', sans-serif;
+}
+

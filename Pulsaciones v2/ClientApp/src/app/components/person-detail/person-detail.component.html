@@ -1,0 +1,40 @@
+<div class="center-content">
+    <div *ngIf="person; else notFound">
+        <h1> {{person.name}}</h1>
+        <div class="center-content">
+            <div class="person-detail">
+                <div class="row">
+                    <div class="label">
+                        <span>Id:</span>
+                    </div>
+                    <div class="info">
+                        <span>{{ person.personId }}</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <span class="label">Nombre:</span>
+                    <span class="info">{{ person.name }}</span>
+                </div>
+                <div class="row">
+                    <span class="label">Edad:</span>
+                    <span class="info">{{ person.age }}</span>
+                </div>
+                <div class="row">
+                    <span class="label">Sexo:</span>
+                    <span class="info">{{ person.sex }}</span>
+                </div>
+                <div class="row">
+                    <span class="label">Pulsaciones:</span>
+                    <span class="info">{{ person.pulsations }}</span>
+                </div>
+                <div class="center-content">
+                    <button (click)="goBack()">Atras</button>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+    <ng-template #notFound>
+        <h1 style="margin-top: 15%;">No ha sido encontrado.</h1>
+    </ng-template>
+</div>

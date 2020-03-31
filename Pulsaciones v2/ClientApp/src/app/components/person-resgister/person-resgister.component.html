@@ -1,0 +1,43 @@
+<link href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap" rel="stylesheet">
+<h1>Registrar Persona</h1>
+<div class=" center-content">
+    <form [formGroup]="personForm " (ngSubmit)="onSubmit()" > 
+        <div class="form-element ">
+            <label for="id">Id</label>
+            <input type="text" name="id" id="id" class="form-input" formControlName="personId">
+            
+        </div>
+        
+        <div class="form-element ">
+            <label for="name">Nombre</label>
+            <input type="text" name="name" id="name" class="form-input" formControlName="personName">
+           
+        </div>
+        <div class="form-element ">
+            <label for="age">Edad</label>
+            <input type="number" name="age" id="age" class="form-input" formControlName="personAge">
+           
+        </div>
+        <div class="form-check ">
+            <label><span>Sexo:</span>
+                <label><input type="radio" name="sex" id="sex" formControlName="personSex" value="F">Femenino</label>
+                <label><input type="radio" name="sex" id="sex" formControlName="personSex" value="M">Masculino</label>
+            </label>
+            
+        </div>
+        <div class="form-element">
+            
+        </div>
+        <div class="center-content">
+    
+            <button type="submit" class="dodger_blue">Registar</button>
+        </div>
+        <div class="center-content" *ngIf="invalidForm">
+            <div class="information-block error-block">
+                <span class="message">
+                    Por favor complete los campos requeridos.
+                </span>
+            </div>
+        </div>
+    </form>
+</div>
